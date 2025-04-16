@@ -21,6 +21,7 @@ pipe =  pipeline(
 #pipe.to("cuda")
 
 app = Flask(__name__)
+print(app)
 run_with_ngrok(app)
 
 @app.route("/submit-prompt", methods=["POST"])
