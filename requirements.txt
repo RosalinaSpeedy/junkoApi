@@ -1,0 +1,7 @@
+torch>=1.4
+transformers
+scipy
+flask_ngrok
+pyngrok==4.1.1
+ftfy
+accelerate
