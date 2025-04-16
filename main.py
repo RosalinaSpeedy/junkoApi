@@ -18,7 +18,7 @@ pipe =  pipeline(
     device_map="auto",
 )
 
-pipe.to("cuda")
+#pipe.to("cuda")
 
 app = Flask(__name__)
 run_with_ngrok(app)
