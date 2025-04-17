@@ -22,7 +22,7 @@ pipe =  pipeline(
 
 app = Flask(__name__)
 print(app)
-run_with_ngrok(app)
+#run_with_ngrok(app)
 
 @app.route("/submit-prompt", methods=["POST"])
 def generate_plan():
