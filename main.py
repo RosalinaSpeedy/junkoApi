@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from flask_ngrok import run_with_ngrok
+from pyngrok import ngrok
 
 import torch
 import base64
@@ -22,7 +23,7 @@ pipe =  pipeline(
 
 app = Flask(__name__)
 print(app)
-#run_with_ngrok(app)
+run_with_ngrok(app)
 
 @app.route("/submit-prompt", methods=["POST"])
 def generate_plan():
@@ -35,5 +36,6 @@ def generate_plan():
     )
     return outputs[0]["generated_text"][-1]
 
+ngrok_tunnel = ngrok.connect(5000)
 if __name__ == "__main__":
     app.run()
