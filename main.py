@@ -25,7 +25,7 @@ app = Flask(__name__)
 print(app)
 run_with_ngrok(app)
 
-@app.route("/submit-prompt", methods=["POST"])
+@app.route("/submit-prompt", methods=["GET"])
 def generate_plan():
     prompt = request.args.get("prompt")
     messages = [{"role": "user", "content": prompt}]
