@@ -16,7 +16,7 @@ from transformers import pipeline
 pipe =  pipeline(
     "text-generation",
     model="RosalinaS/Junko",
-    device_map="auto",
+    device_map="cuda",
 )
 
 #pipe.to("cuda")
