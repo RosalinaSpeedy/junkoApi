@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from flask_ngrok import run_with_ngrok
+from ngrok_flask_cart import run_with_ngrok
 from pyngrok import ngrok
 
 import torch
@@ -36,6 +36,6 @@ def generate_plan():
     )
     return outputs[0]["generated_text"][-1]
 
-ngrok_tunnel = ngrok.connect(5000)
+ngrok_tunnel = ngrok.connect(80)
 if __name__ == "__main__":
     app.run()
