@@ -38,4 +38,4 @@ def generate_plan():
 
 ngrok_tunnel = ngrok.connect(80)
 if __name__ == "__main__":
-    app.run(port=80)
+    app.run(debug=True, use_reloader=False, port=80)
