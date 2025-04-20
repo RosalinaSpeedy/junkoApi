@@ -36,6 +36,6 @@ def generate_plan():
     )
     return outputs[0]["generated_text"][-1]
 
-ngrok_tunnel = ngrok.connect(80)
+#ngrok_tunnel = ngrok.connect(80)
 if __name__ == "__main__":
-    app.run()
+    app.run(port=80)
