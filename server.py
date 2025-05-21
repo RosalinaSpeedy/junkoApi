@@ -4,7 +4,7 @@ model = AutoModel.from_pretrained("RosalinaS/Junko")
 
 #pipe = pipeline(task="text-generation", model=model_id, tokenizer=tokenizer, max_length=200)
 messages = [
-    {"role": "user", "content": "Addiction name: Pornography Triggers: - late night - horny - lonliness Addiction Severity: 0.7 Warning Signs: -"},
+    {"role": "user", "content": "Addiction name: Pornography Triggers: - late night - sexual cravings - lonliness Addiction Severity: 0.7 Warning Signs: -"},
 ]
 
 outputs = model(
